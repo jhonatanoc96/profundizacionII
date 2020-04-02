@@ -1,0 +1,9 @@
+C:\Users\Jhonatan\Desktop\prof\clase\plantilla\profundizacionII\platforms\android\app\src\main\assets\app\0.js
+C:\Users\Jhonatan\Desktop\prof\clase\plantilla\profundizacionII\platforms\android\app\src\main\assets\app\1.js
+C:\Users\Jhonatan\Desktop\prof\clase\plantilla\profundizacionII\platforms\android\app\src\main\assets\app\2.js
+C:\Users\Jhonatan\Desktop\prof\clase\plantilla\profundizacionII\platforms\android\app\src\main\assets\app\3.js
+C:\Users\Jhonatan\Desktop\prof\clase\plantilla\profundizacionII\platforms\android\app\src\main\assets\app\4.js
+C:\Users\Jhonatan\Desktop\prof\clase\plantilla\profundizacionII\platforms\android\app\src\main\assets\app\bundle.js
+C:\Users\Jhonatan\Desktop\prof\clase\plantilla\profundizacionII\platforms\android\app\src\main\assets\app\runtime.js
+C:\Users\Jhonatan\Desktop\prof\clase\plantilla\profundizacionII\platforms\android\app\src\main\assets\app\tns-java-classes.js
+C:\Users\Jhonatan\Desktop\prof\clase\plantilla\profundizacionII\platforms\android\app\src\main\assets\app\vendor.js
