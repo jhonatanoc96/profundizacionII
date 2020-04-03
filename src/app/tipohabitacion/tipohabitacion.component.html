@@ -12,15 +12,20 @@
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left">
     </ActionItem>
     <Label text="Browse"></Label>
+    <Button text = "salir" (tap)="salir()" class= "btn btn-primary">
+    </Button>
 </ActionBar>
 
-<GridLayout class="page__content">
-    <Label class="page__content-icon far" text="&#xf1ea;"></Label>
-    <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
-
-
-
-
-
+<GridLayout >
+<ListView [items]="tipohabitacion">
+    <ng-template let-item="item">
+        <StackLayout>
+            <Label  [text]="item._id"></Label>
+            <Label  [text]="item.nombre"></Label>
+            <Label  [text]="item.precio"></Label>
+        </StackLayout>
+    </ng-template>
+</ListView>
 
 </GridLayout>
+

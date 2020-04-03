@@ -29,9 +29,5 @@ export class LoginService {
 
   }
 
-  getHabitaciones() {
-  this.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZGU1YjE5YTlmODYxZDEyNjQwZTQxZjYiLCJpYXQiOjE1ODQ5MDkxNTcsImV4cCI6MTU4NDkxMDA1N30.wPpsBOg2BYbC8-cfJy5HU00VzbidaSY9kRt9iBQ3loU";
-  let headers = this.crearRequestHeader();
-  return this.http.get(this.serverUrl + "api/habitaciones", { headers });
-  // }
+  
 }
