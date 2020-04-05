@@ -12,11 +12,11 @@
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left">
     </ActionItem>
     <Label text="Home"></Label>
+    <Button text="SALIR" (tap)="salir()" style="width: 50%; margin-left: 500px;">
+    </Button>
 </ActionBar>
 
 <GridLayout class="page__content">
     <Label class="page__content-icon fas" text="&#xf015;"></Label>
     <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
-    <Button text="Profundización!" class="btn btn-primary"></Button>
-    <Button text="Volver" (tap)="salir()"></Button>
 </GridLayout>

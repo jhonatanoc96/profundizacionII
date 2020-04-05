@@ -4,6 +4,10 @@ import { RouterExtensions } from "nativescript-angular/router";
 import { User } from "../../model/user";
 import { LoginService } from "../../shared/login.service";
 import { setString } from "tns-core-modules/application-settings";
+import { EventData } from "tns-core-modules/data/observable";
+import { Page } from "tns-core-modules/ui/page";
+import { ActivityIndicator } from "tns-core-modules/ui/activity-indicator";
+
 
 
 @Component({
@@ -13,14 +17,15 @@ import { setString } from "tns-core-modules/application-settings";
 })
 export class LoginComponent implements OnInit {
   user: User;
+  isBusy = false;
 
-
-  constructor(private routerExtensions: RouterExtensions, private loginService: LoginService) {
+  constructor(private routerExtensions: RouterExtensions, private loginService: LoginService, private page: Page) {
     this.user = new User();
+    this.page.actionBarHidden = true;
   }
 
   ngOnInit(): void {
-    this.user=new User();
+    this.user = new User();
   }
 
   isLoggingIn = true;
@@ -31,6 +36,9 @@ export class LoginComponent implements OnInit {
 
   submit() {
     if (this.isLoggingIn) {
+
+      this.isBusy = true;
+
       // Perform the login
       if (!this.user.email || !this.user.pass) {
         this.alert("Debe ingresar un correo y una contraseña");
@@ -47,11 +55,12 @@ export class LoginComponent implements OnInit {
         console.log(result.token.access_token);
         setString("token", result.token.access_token);
 
-
+        this.isBusy = false;
         this.routerExtensions.navigate(["/home"], { clearHistory: true }); //Limpiar el historial para deshabilitar el back
 
       }, (error) => {
         this.alert(error.error.message);
+        this.isBusy = false;
       }
 
       );
@@ -87,6 +96,10 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  onBusyChanged(args: EventData) {
+    let indicator: ActivityIndicator = <ActivityIndicator>args.object;
+    console.log("indicator.busy changed to: " + indicator.busy);
+  }
 
 }
 

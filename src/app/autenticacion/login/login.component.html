@@ -18,7 +18,10 @@
         </StackLayout>
 
 
-        <Button [text]="isLoggingIn ? 'Iniciar Sesión' : 'Registrarse'" (tap)="submit()"></Button>
+        <ActivityIndicator rowspan="2" [busy]="isBusy" color="#365a95" width="100" height="100" (busyChange)="onBusyChanged($event)">
+        </ActivityIndicator>
+
+        <Button [text]="isLoggingIn ? 'Iniciar Sesión' : 'Registrarse'" [isEnabled]="!isBusy" (tap)="submit()"></Button>
         <Label *ngIf="isLoggingIn" text="¿Olvidó su contraseña?" (tap)="forgotPassword()"></Label>
 
     </StackLayout>
