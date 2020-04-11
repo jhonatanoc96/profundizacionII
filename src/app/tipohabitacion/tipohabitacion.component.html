@@ -11,7 +11,7 @@
     -->
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left">
     </ActionItem>
-    <Label text="Browse"></Label>
+    <Label text="Tipo Habitaciones"></Label>
     <Button text="SALIR" (tap)="salir()" style="width: 50%; margin-left: 500px;">
     </Button>
 </ActionBar>
@@ -23,6 +23,7 @@
                 <Label [text]="item._id"></Label>
                 <Label [text]="item.nombre"></Label>
                 <Label [text]="item.precio"></Label>
+                <Label class="page__content-icon fas" text="&#xf084;"></Label>
             </StackLayout>
         </ng-template>
     </ListView>

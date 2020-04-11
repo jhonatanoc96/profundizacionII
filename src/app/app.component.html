@@ -6,16 +6,16 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
 <RadSideDrawer [drawerTransition]="sideDrawerTransition">
     <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
         <StackLayout row="0" class="nt-drawer__header">
-            <Image class="nt-drawer__header-image fas t-36" src="font://&#xf2bd;"></Image>
-            <Label class="nt-drawer__header-brand" text="User Name"></Label>
-            <Label class="nt-drawer__header-footnote" text="username@mail.com"></Label>
+            <Image class="nt-drawer__header-image fas t-36" src="font://&#xf1ad;"></Image>
+            <Label class="nt-drawer__header-brand" text="Paula"></Label>
+            <Label class="nt-drawer__header-footnote" text="paulamaz55@gmail.com"></Label>
         </StackLayout>
 
         <ScrollView row="1" class="nt-drawer__body">
             <StackLayout>
                 <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/home')" (tap)="onNavItemTap('/home')">
-                    <Label col="0" text="&#xf015;" class="nt-icon fas"></Label>
-                    <Label col="1" text="Home" class="p-r-10"></Label>
+                    <Label col="0" text="&#xf004;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Quienes Somos" class="p-r-10"></Label>
                 </GridLayout>
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/tipohabitacion')" (tap)="onNavItemTap('/tipohabitacion')">
@@ -24,20 +24,20 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
                 </GridLayout>
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/camara')" (tap)="onNavItemTap('/camara')">
-                    <Label col="0" text="&#xf002;" class="nt-icon fas"></Label>
+                    <Label col="0" text="&#xf083;" class="nt-icon fas"></Label>
                     <Label col="1" text="Cámara" class="p-r-10"></Label>
                 </GridLayout>
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/featured')" (tap)="onNavItemTap('/featured')">
-                    <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
-                    <Label col="1" text="Featured" class="p-r-10"></Label>
+                    <Label col="0" text="&#xf0eb;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Manejo Luces" class="p-r-10"></Label>
                 </GridLayout>
 
                 <StackLayout class="hr"></StackLayout>
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/settings')" (tap)="onNavItemTap('/settings')">
-                    <Label col="0" text="&#xf013;" class="nt-icon fas"></Label>
-                    <Label col="1" text="Settings" class="p-r-10"></Label>
+                    <Label col="0" text="&#xf2cd;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Control Flujo Agua" class="p-r-10"></Label>
                 </GridLayout>
             </StackLayout>
         </ScrollView>
