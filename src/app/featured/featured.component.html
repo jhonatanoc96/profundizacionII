@@ -9,13 +9,21 @@
     NavigationButton as a side-drawer button in iOS is not possible,
     because its function is to always navigate back in the application.
     -->
-    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
-        ios.position="left">
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left">
     </ActionItem>
     <Label text="Luces"></Label>
 </ActionBar>
 
 <GridLayout class="page__content">
     <Label class="page__content-icon fas" text="&#xf1e6;"></Label>
+    <StackLayout>
+        
+        <Button text="Encender LED Rojo" (tap)="encenderLedRojo()" class="my-button"></Button>
+        <Button text="Apagar LED Rojo" (tap)="apagarLedRojo()" class="my-button"></Button>
+        <Button text="Encender LED Verde" (tap)="encenderLedVerde()" class="my-button"></Button>
+        <Button text="Apagar LED Verde" (tap)="apagarLedVerde()" class="my-button"></Button>
+
+    </StackLayout>
+
     <Label class="page__content-placeholder" text="Enciende y apaga luces"></Label>
 </GridLayout>
