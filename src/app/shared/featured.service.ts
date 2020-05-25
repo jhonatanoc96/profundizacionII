@@ -24,9 +24,6 @@ export class FeaturedService {
             "Content-Type": "application/json"
         });
 
-        console.log(this.serverUrl);
-        console.log(data);
-
         return this.http.post(
             this.serverUrl + "led/" + color + "/", data, { headers: headers });
     }

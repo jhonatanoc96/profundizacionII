@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http"
   providedIn: 'root'
 })
 export class LoginService {
-  private serverUrl = "https://apiprof1parroyave.herokuapp.com/";
+  private serverUrl = "https://apiprofjocampo.herokuapp.com/";
   private token: string;
 
   constructor(private http: HttpClient) { }

@@ -9,7 +9,6 @@ import { alert, prompt } from "tns-core-modules/ui/dialogs"
 @Component({
     selector: "ns-tipohabitacion",
     templateUrl: "./tipohabitacion.component.html",
-  
 })
 export class TipohabitacionComponent implements OnInit {
 
@@ -25,7 +24,7 @@ export class TipohabitacionComponent implements OnInit {
     ngOnInit(): void {
         this.TipoHabitacionService.getTipoHabitacion().
             subscribe((result: any) => {
-                this.tipohabitacion = result.tipohabitaciones;              
+                this.tipohabitacion = result.tipohabitaciones;
             }, (error) => {
                 this.alert(error.error.message);
             }
