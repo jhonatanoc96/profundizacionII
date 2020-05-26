@@ -15,15 +15,16 @@
 </ActionBar>
 
 <GridLayout class="page__content">
-    <Label class="page__content-icon fas" text="&#xf1e6;"></Label>
+    <Label class="page__content-icon fas" text=""></Label>
     <StackLayout>
         
-        <Button text="Encender LED Rojo" (tap)="encenderLedRojo()" class="my-button"></Button>
-        <Button text="Apagar LED Rojo" (tap)="apagarLedRojo()" class="my-button"></Button>
-        <Button text="Encender LED Verde" (tap)="encenderLedVerde()" class="my-button"></Button>
-        <Button text="Apagar LED Verde" (tap)="apagarLedVerde()" class="my-button"></Button>
+        
+        <Button text="Encender LED Rojo" style="margin: 30px" (tap)="encenderLedRojo()" class="my-button"></Button>
+        <Button text="Apagar LED Rojo" style="margin: 30px" (tap)="apagarLedRojo()" class="my-button"></Button>
+        <Button text="Encender LED Verde" style="margin: 30px" (tap)="encenderLedVerde()" class="my-button"></Button>
+        <Button text="Apagar LED Verde" style="margin: 0px" (tap)="apagarLedVerde()" class="my-button"></Button>
 
     </StackLayout>
 
-    <Label class="page__content-placeholder" text="Enciende y apaga luces"></Label>
+    <Label class="page__content-placeholder" text=""></Label>
 </GridLayout>
