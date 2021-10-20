@@ -29,7 +29,6 @@ export class SettingsComponent implements OnInit {
     ngOnInit(): void {
         this.settingsService.getRfid().
             subscribe((result: any) => {
-                console.log(result);
                 this.rfid = result.rfids;
             }, (error) => {
                 this.alert(error.error.message);
@@ -58,8 +57,6 @@ export class SettingsComponent implements OnInit {
             cancelButtonText: "Cancelar",
             inputType: dialogs.inputType.text
         }).then(r => {
-            // console.log("Dialog result: " + r.result + ", text: " + r.text); 
-
             //Subscribir promesa
             this.settingsService.writeRfid({
                 texto: r.text
@@ -79,7 +76,6 @@ export class SettingsComponent implements OnInit {
         //Subscribir promesa
         this.settingsService.readRfid().
             subscribe((result: any) => {
-                console.log(result);
                 this.nuevo = result.respuesta.split("|");
 
                 this.alert("Se ha leído la tarjeta: \n" + "ID: " + this.nuevo[0] + 
@@ -110,15 +106,11 @@ export class SettingsComponent implements OnInit {
 
                         this.nuevo = data.respuesta.split("|");
 
-                        // console.log(this.nuevo[0]);
-                        // console.log(this.nuevo[1]);
-
                         //ALMACENAR REGISTRO
                         this.settingsService.addRfid({
                             identificador: this.nuevo[0],
                             texto: this.nuevo[1]
                         }).subscribe((data2: any) => { 
-                            console.log("registro agregado")
                             this.nuevo = "";
                         }, (error2) => {
                             console.log("falló almacenar registro")
